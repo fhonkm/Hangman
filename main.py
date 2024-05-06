@@ -1,13 +1,13 @@
-import hangman_art
-import hangman_list
+from hangman_art import logo, stages
+from hangman_list import words
 import random
 
 # extract from imports
-hangman_logo = hangman_art.logo
-chosen_word = random.choice(hangman_list.words)
+hangman_logo = logo
+chosen_word = random.choice(words)
 
 # starting conds
-print(hangman_art.logo)
+print(logo)
 end_of_game = False
 display = []
 guesses = []
@@ -45,4 +45,4 @@ while not end_of_game:
         end_of_game = True
         print("winner winner chicken dinner!")
 
-    print(hangman_art.stages[lives])
+    print(stages[lives])
